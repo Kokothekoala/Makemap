@@ -1,0 +1,6 @@
+Pour faire fonctionner :
+
+Télécharger http://download.geofabrik.de/europe/denmark-latest.osm.pbf
+
+Penser à bien commenter les parties DownloadMap après le premier usage et à
+utiliser un zoom maximum de 13 pour ne pas surcharger les serveurs.

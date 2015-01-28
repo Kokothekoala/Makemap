@@ -161,12 +161,12 @@ class Overlay:
     back.show()
     back.save(self.result)
              
-bound1=getTile(10,56.2,7.860718)
-bound2=getTile(10,54.7,13.002319)
-#gt=getTiles(10,bound1,bound2,"http://a.www.toolserver.org/tiles/osm-no-labels","png","nolabels")
-#gt=getTiles(10,bound1,bound2,"http://tile.lonvia.de/cycling","png","lonviacycle")
+bound1=getTile(12,56.2,7.860718)
+bound2=getTile(12,54.7,13.002319)
+#gt=getTiles(12,bound1,bound2,"http://a.www.toolserver.org/tiles/osm-no-labels","png","nolabels")
+#gt=getTiles(12,bound1,bound2,"http://tile.lonvia.de/cycling","png","lonviacycle")
 #gt=getTiles(8,bound1,bound2,"http://toolserver.org/~cmarqu/hill/","png","hillshading")
-#os.system("sh lonviacycle/massconvert.sh")
+os.system("sh lonviacycle/massconvert.sh")
 #os.system("sh hillshading/massconvert.sh")
 f=open("cities","r")
 cities=[]
@@ -208,5 +208,5 @@ for line in f:
     llist2=(" ".join(llist[0:-2]),llist[-2],llist[-1])
     print llist2
     cities.append(("camp",llist2[0],(float(llist2[2]),float(llist2[1]))))
-ol=Overlay(10,bound1,bound2,("nolabels","lonviacycle"),cities,"out.png")
+ol=Overlay(12,bound1,bound2,("nolabels","lonviacycle"),cities,"out.png")
 ol.makemap()
